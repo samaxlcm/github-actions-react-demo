@@ -2,17 +2,17 @@ pipeline {
     // agent {
     //     label 'jenkins_agent'
     // }
-    
+
     agent any
 
     stages {
         stage('Build') {
             steps {
                 retry(3){
-                    sh "command"
+                    sh "ls -l"
                 }
                 timeout(time:3,unit:"MINUTES"){
-                    sh "some command"
+                    sh "ls -l"
                 }
             }
         }
