@@ -76,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 if you want to enable the github page service please go the the repo then select `Settings` -> Pages -> Source -> 'YOUR GITHUB BRANCH' -> SAVE
 
 Branch update - Dev
+Branch update - Feature A
