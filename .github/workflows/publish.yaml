@@ -4,28 +4,28 @@ on:
     branches:
       - master
 jobs:
-  install-and-test:
-    runs-on: ubuntu-latest
+  # install-and-test:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x]
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x, 14.x]
 
-    steps:
-      - uses: actions/checkout@master
+  #   steps:
+  #     - uses: actions/checkout@master
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node-version }}
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@master
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - name: Install
-        run: npm install
-        env:
-          CI: true
+  #     - name: Install
+  #       run: npm install
+  #       env:
+  #         CI: true
 
-      - name: Test
-        run: npm test
+  #     - name: Test
+  #       run: npm test
 
   build-and-deploy:
     runs-on: ubuntu-latest
