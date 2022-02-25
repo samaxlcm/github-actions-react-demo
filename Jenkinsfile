@@ -1,17 +1,11 @@
 pipeline {
-    // agent {
-    //     label 'jenkins_agent'
-    // }
+    agent {
+        label 'jenkins_agent'
+    }
 
-    agent any
+    // agent any
 
     stages {
-        environment { 
-            registry = "YourDockerhubAccount/YourRepository" 
-            registryCredential = 'dockerhub_id' 
-            dockerImage = '' 
-        }
-
         stage('Build') {
             steps {
                 retry(3){
